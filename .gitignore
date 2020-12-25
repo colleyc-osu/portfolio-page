@@ -41,6 +41,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+#sketch note
+sketches/note.txt
+
 # TypeScript v1 declaration files
 typings/
 
