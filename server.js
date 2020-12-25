@@ -5,7 +5,11 @@ var app = express();
 var exphbs = require('express-handlebars');
 const { type } = require('os');
 const { EDESTADDRREQ } = require('constants');
-var port = process.env.PORT || 3000; 
+var port = process.env.PORT || 3000;
+
+var projects = require('./JSONs/projectsList.JSON');
+var positions = require('./JSONs/positionsList.JSON');
+var degrees = require('./JSONs/degreesList.JSON');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
