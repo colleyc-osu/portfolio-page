@@ -17,14 +17,85 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.static('public'));
 
+
 app.get('/', function(req, res, next) {
-    res.status(200).render('login');
+	res.status(301).redirect('/portfolio/');
+	next();
 });
 
+app.get('/portfolio/', function(req, res, next) {
+	res.status(200).render('portfolio');
+});
+
+app.get('/experience/', function(req, res, next) {
+	res.status(200).render('experience');
+});
+
+app.get('/education/', function(req, res, next) {
+	res.status(200).render('education');
+});
+
+app.get('/summary/', function(req, res, next) {
+	res.status(200).render('summary');
+});
+
+
+app.get('/:proj/', function(req, res, next) {
+	var proj = req.params.proj;
+	if (projects[proj]) {
+		res.status(301).redirect('/:proj/demo/');
+		next();
+	}
+	else {
+		next();
+	}
+});
+
+app.get('/:proj/demo/', function(req, res, next) {
+	var proj = req.params.proj;
+	if(projects[proj]) {
+		res.status(200).render('projectdemo', projects[proj]);
+	}
+	else {
+		next();
+	}
+});
+
+app.get('/:proj/code/', function(req, res, next) {
+	var proj = req.params.proj;
+	if(project[proj]) {
+		res.status(200).render('password');
+	}
+	else {
+		next();
+	}
+});
+
+app.post('/:proj/code/sendPwd', function(req, res, next) {
+	if (req.body && req.body.password) {
+		//actually checking pwd
+		if (req.body.password == "####") {
+			if (project[proj]) {
+				res.status(200).render('projectcode', projects[proj]);
+			}
+			else {
+				next();
+			}
+		}
+		else {
+			//
+		}
+	}
+	else {
+		res.status(400);
+	}
+});
+
+
 app.get('*', function (req, res) {
-    res.status(404).render('404');
+	res.status(404).render('404');
 });
 
 app.listen(port, function () {
-  console.log("== Server is listening on port", port);
+	console.log("== Server is listening on port", port);
 });
