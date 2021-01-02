@@ -45,6 +45,9 @@ jspm_packages/
 sketches/note.txt
 /todo.txt
 
+#projects
+projects/
+
 # TypeScript v1 declaration files
 typings/
 
