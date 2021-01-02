@@ -1,0 +1,46 @@
+{
+	"project1": {
+		"title": "Project 1",
+		"description": "fkjhfdgjkhdfgjkhdfsg",
+		"files": [
+			{
+				"filename": "owo.txt",
+				"filepath": "./projects/project1/owo.txt"
+			},
+			{
+				"filename": "uwu.txt",
+				"filepath": "./projects/project1/uwu.txt"
+			}
+		]
+	},
+
+	"project2": {
+		"title": "Project 2",
+		"description": "jghfgkjdflhgfd",
+		"files": [
+			{
+				"filename": "owo.txt",
+				"filepath": "./projects/project2/owo.txt"
+			},
+			{
+				"filename": "uwu.txt",
+				"filepath": "./projects/project2/uwu.txt"
+			}
+		]
+	},
+
+	"portfolio": {
+		"title": "Code Portfolio",
+		"description": "you're lookin at it",
+		"files": [
+			{
+				"filename": "owo",
+				"filepath": "./projects/portfolio/owo.txt"
+			},
+			{
+				"filename": "uwu",
+				"filepath": "./projects/portfolio/uwu.txt"
+			}
+		]
+	}
+}

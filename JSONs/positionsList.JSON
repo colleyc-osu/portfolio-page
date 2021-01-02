@@ -1,0 +1,22 @@
+{
+	"meat": {
+		"title": "Meat & Seafood Clerk",
+		"dates": "June - September 2019",
+		"location": "Market of Choice, West Linn",
+		"description": "Duties include: preparing food to go in our display and self-serve cases, preparing special orders for customers, helping customers get what they need in our department, and thoroughly cleaning the department every night."
+	},
+
+	"frozen": {
+		"title": "Frozen Food Clerk",
+		"dates": "August - September 2018",
+		"location": "Safeway, West Linn",
+		"description": "Duties include: stocking shelves, writing and placing orders, dealing with distressed items, taking charge of incoming pallets of product, designing and filling weekly displays, and doing major reorganization of the walk-in freezer. Would work occasional nightshifts to throw freight in a timely manner."
+	},
+
+	"courtesy": {
+		"title": "Courtesy Clerk",
+		"dates": "June 2017 - August 2018",
+		"location": "Safeway, West Linn",
+		"description": "Duties include: bagging groceries, helping customers out to their cars, regularly opening the store and getting it ready for the day, dealing with the bottle recycle room, facing aisles, bringing in carts, and keeping the store clean. In addition, I regularly helped out dairy department with throwing their pallets of product. During this time, I also pulled a nightshift with two superiors working backstock to shelves."
+	}
+}

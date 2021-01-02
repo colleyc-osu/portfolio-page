@@ -24,15 +24,15 @@ app.get('/', function(req, res, next) {
 });
 
 app.get('/portfolio/', function(req, res, next) {
-	res.status(200).render('portfolio');
+	res.status(200).render('portfolio', projects);
 });
 
 app.get('/experience/', function(req, res, next) {
-	res.status(200).render('experience');
+	res.status(200).render('experience', positions);
 });
 
 app.get('/education/', function(req, res, next) {
-	res.status(200).render('education');
+	res.status(200).render('education', degrees);
 });
 
 app.get('/summary/', function(req, res, next) {
