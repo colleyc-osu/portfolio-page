@@ -7,9 +7,9 @@ const { type } = require('os');
 const { EDESTADDRREQ } = require('constants');
 var port = process.env.PORT || 3000;
 
-var projects = require('./JSONs/projectsList.JSON');
-var positions = require('./JSONs/positionsList.JSON');
-var degrees = require('./JSONs/degreesList.JSON');
+var projects = require('./JSONs/projectsList.json');
+var positions = require('./JSONs/positionsList.json');
+var degrees = require('./JSONs/degreesList.json');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -24,15 +24,15 @@ app.get('/', function(req, res, next) {
 });
 
 app.get('/portfolio/', function(req, res, next) {
-	res.status(200).render('portfolio', projects);
+	res.status(200).render('portfolio', {projects});
 });
 
 app.get('/experience/', function(req, res, next) {
-	res.status(200).render('experience', positions);
+	res.status(200).render('experience', {positions});
 });
 
 app.get('/education/', function(req, res, next) {
-	res.status(200).render('education', degrees);
+	res.status(200).render('education', {degrees});
 });
 
 app.get('/summary/', function(req, res, next) {
@@ -40,7 +40,7 @@ app.get('/summary/', function(req, res, next) {
 });
 
 
-app.get('/:proj/', function(req, res, next) {
+app.get('/portfolio/:proj/', function(req, res, next) {
 	var proj = req.params.proj;
 	if (projects[proj]) {
 		res.status(301).redirect('/:proj/demo/');
@@ -51,7 +51,7 @@ app.get('/:proj/', function(req, res, next) {
 	}
 });
 
-app.get('/:proj/demo/', function(req, res, next) {
+app.get('/portfolio/:proj/demo', function(req, res, next) {
 	var proj = req.params.proj;
 	if(projects[proj]) {
 		res.status(200).render('projectdemo', projects[proj]);
@@ -61,9 +61,9 @@ app.get('/:proj/demo/', function(req, res, next) {
 	}
 });
 
-app.get('/:proj/code/', function(req, res, next) {
+app.get('/portfolio/:proj/code', function(req, res, next) {
 	var proj = req.params.proj;
-	if(project[proj]) {
+	if(projects[proj]) {
 		res.status(200).render('password');
 	}
 	else {
@@ -71,7 +71,7 @@ app.get('/:proj/code/', function(req, res, next) {
 	}
 });
 
-app.post('/:proj/code/sendPwd', function(req, res, next) {
+app.post('/portfolio/:proj/code/sendPwd', function(req, res, next) {
 	if (req.body && req.body.password) {
 		//actually checking pwd
 		if (req.body.password == "####") {
