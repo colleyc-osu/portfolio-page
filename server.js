@@ -72,18 +72,19 @@ app.get('/portfolio/:proj/code', function(req, res, next) {
 });
 
 app.post('/portfolio/:proj/code/sendPwd', function(req, res, next) {
+	var proj = req.params.proj;
 	if (req.body && req.body.password) {
 		//actually checking pwd
 		if (req.body.password == "####") {
-			if (project[proj]) {
+			if (projects[proj]) {
 				res.status(200).render('projectcode', projects[proj]);
 			}
 			else {
-				next();
+				next();		//will need to edit this to for re-rendering
 			}
 		}
 		else {
-			//
+			res.status(401);
 		}
 	}
 	else {

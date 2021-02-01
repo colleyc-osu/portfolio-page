@@ -3,21 +3,23 @@ function sendPassword (inputtedPassword) {
 	var request = new XMLHttpRequest();
 
 	var currentURL = window.location.pathname;
-	console.log(currentURL);
-	var requestURL = currentURL + 'sendPwd';
+	var requestURL = currentURL + '/sendPwd';
+
 	request.open('POST', requestURL);
 
-	var requestBody = inputtedPassword;
+	var requestBody = JSON.stringify({password: inputtedPassword});
+	request.setRequestHeader('Content-Type', 'application/json');
 
 	request.addEventListener('load', function (event) {
-		//
+		// pop-ups for wrong passwords
 	});
 
-	request.send(reqBody);
+	request.send(requestBody);
 
 }
 
 document.getElementById('pw-submit').onclick = function() {
+
 	var password = document.getElementById('pw-prompt').value;
 	if (password) {
 		sendPassword(password);
