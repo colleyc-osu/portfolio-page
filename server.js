@@ -84,7 +84,7 @@ app.post('/portfolio/:proj/code/sendPwd', function(req, res, next) {
 			}
 		}
 		else {
-			res.status(401);
+			res.status(401).send();
 		}
 	}
 	else {

@@ -11,7 +11,18 @@ function sendPassword (inputtedPassword) {
 	request.setRequestHeader('Content-Type', 'application/json');
 
 	request.addEventListener('load', function (event) {
-		// pop-ups for wrong passwords
+		if (event.target.status === 200) {
+			var truePage = event.target.response;
+			document.documentElement.innerHTML = truePage;
+
+			// below works, but bad practice
+			//document.open();
+			//document.write(truePage);
+			//document.close();
+		}
+		else {
+			alert("Password was incorrect.");
+		}
 	});
 
 	request.send(requestBody);
