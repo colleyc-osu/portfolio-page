@@ -24,19 +24,19 @@ app.get('/', function(req, res, next) {
 });
 
 app.get('/portfolio/', function(req, res, next) {
-	res.status(200).render('portfolio', {projects});
+	res.status(200).render('portfolio', {projects, portfolio: true});
 });
 
 app.get('/experience/', function(req, res, next) {
-	res.status(200).render('experience', {positions});
+	res.status(200).render('experience', {positions, experience: true});
 });
 
 app.get('/education/', function(req, res, next) {
-	res.status(200).render('education', {degrees});
+	res.status(200).render('education', {degrees, education: true});
 });
 
 app.get('/summary/', function(req, res, next) {
-	res.status(200).render('summary');
+	res.status(200).render('summary', {summary: true});
 });
 
 
