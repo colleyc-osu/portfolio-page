@@ -5,28 +5,32 @@
 		"files": [
 			{
 				"filename": "owo.txt",
-				"filepath": "./projects/project1/owo.txt"
+				"filepath": "/projects/project1/owo.txt"
 			},
 			{
 				"filename": "uwu.txt",
-				"filepath": "./projects/project1/uwu.txt"
+				"filepath": "/projects/project1/uwu.txt"
 			}
-		]
+		],
+		"executable": "/projects/project1/project1.py",
+		"video": "/projects/project1/project1.mp4"
 	},
 
 	"project2": {
 		"title": "Project 2",
-		"description": "jghfgkjdflhgfd",
+		"description": "Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures. Conveying concluded newspaper rapturous oh at. Two indeed suffer saw beyond far former mrs remain. Occasional continuing possession we insensible an sentiments as is. Law but reasonably motionless principles she. Has six worse downs far blush rooms above stood.",
 		"files": [
 			{
 				"filename": "owo.txt",
-				"filepath": "./projects/project2/owo.txt"
+				"filepath": "/projects/project2/owo.txt"
 			},
 			{
 				"filename": "uwu.txt",
-				"filepath": "./projects/project2/uwu.txt"
+				"filepath": "/projects/project2/uwu.txt"
 			}
-		]
+		],
+		"executable": "/projects/project2/project2.py",
+		"video": "/projects/project2/project2.mp4"
 	},
 
 	"portfolio": {
@@ -35,12 +39,14 @@
 		"files": [
 			{
 				"filename": "owo",
-				"filepath": "./projects/portfolio/owo.txt"
+				"filepath": "/projects/portfolio/owo.txt"
 			},
 			{
 				"filename": "uwu",
-				"filepath": "./projects/portfolio/uwu.txt"
+				"filepath": "/projects/portfolio/uwu.txt"
 			}
-		]
+		],
+		"executable": "/projects/portfolio/portfolio.py",
+		"video": "/projects/portfolio/portfolio.mp4"
 	}
 }
