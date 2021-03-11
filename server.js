@@ -80,7 +80,7 @@ app.post('/portfolio/:proj/code/sendPwd', function(req, res, next) {
 				res.status(200).render('projectcode', projects[proj]);
 			}
 			else {
-				next();		//will need to edit this to for re-rendering
+				next();
 			}
 		}
 		else {

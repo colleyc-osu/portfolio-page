@@ -15,6 +15,14 @@ function sendPassword (inputtedPassword) {
 			var truePage = event.target.response;
 			document.documentElement.innerHTML = truePage;
 
+			//if you include this js in index, it doesnt load correctly because it
+			//	first loads on the pwd page and remains null
+			var newjs = document.createElement("script");
+			newjs.src = "/truePage.js";
+			newjs.charset = "utf-8";
+			newjs.defer = true;
+			document.head.appendChild(newjs);
+
 			// below works, but bad practice
 			//document.open();
 			//document.write(truePage);
