@@ -18,6 +18,18 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
+// proof of concept of demo
+var exec = require('child_process').exec;
+exec('./mystery', function (error, stdout, stderr) {
+	if (error) {
+		console.log(":(");
+	}
+	else {
+		console.log("chug jug");
+	}
+});
+
+
 app.get('/', function(req, res, next) {
 	res.status(301).redirect('/portfolio/');
 	next();
