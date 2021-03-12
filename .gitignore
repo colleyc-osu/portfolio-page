@@ -46,7 +46,8 @@ sketches/note.txt
 /todo.txt
 
 #projects
-projects/
+public/projects/
+JSONs/
 
 # TypeScript v1 declaration files
 typings/
